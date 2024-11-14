@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossa história</title>
+    <style>
+        /* Resetando o estilo padrão */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5c6cb; /* Fundo rosa claro */
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #ff99cc; /* Cor de fundo com o tema da Hello Kitty */
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 3em;
+            color: #fff;
+        }
+
+        header img {
+            width: 80px;
+            margin-top: 10px;
+        }
+
+        header p {
+            color: #fff;
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .content .card {
+            width: 300px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .content .card img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .content .card h2 {
+            margin-top: 20px;
+            font-size: 1.5em;
+            color: #ff66b2; /* Cor de texto que combina com o tema */
+        }
+
+        .content .card p {
+            font-size: 1.1em;
+            color: #333;
+        }
+
+        footer {
+            background-color: #ff66b2;
+            color: #fff;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .add-content-btn {
+            padding: 10px 20px;
+            background-color: #ff66b2;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .add-content-btn:hover {
+            background-color: #ff3385;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Bem-vinda ao site da nossa história, meu amor!</h1>
+        <p>Desculpa não ter feito nada melhor, mas dei o meu máximo fazendo isso ♡ </p>
+    </header>
+
+    <div class="content">
+        <div class="card">
+            <img src="https://cdn.discordapp.com/attachments/1221618064789999713/1306390184811561060/IMG-20241012-WA0032.jpg?ex=67367e2b&is=67352cab&hm=bcb64a774522d7dfae9d72204a4c6e3f47383902898bc0f42dce197d7c5ebabd&" alt="Imagem 1">
+            <p>Eu te amo muito meu amor, e desde que te conheci também tive a certeza de que a gente ia dar certo</p>
+        </div>
+        <div class="card">
+            <img src="https://cdn.discordapp.com/attachments/1221618064789999713/1306390183708590131/IMG_20241111_225249.jpg?ex=67367e2b&is=67352cab&hm=d52d9db8ec3da8a2ffde4c82d0808de2006b1981716a3f7969e35c4720919d0a&" alt="Imagem 2">
+            <p>Desde o nosso primeiro encontro, até hoje, sinto um frio na barriga, o motivo eu não sei, mas não quero perder essa sensação nunca</p>
+        </div>
+        <div class="card">
+            <img src="https://cdn.discordapp.com/attachments/1221618064789999713/1306389720531730523/IMG-20240504-WA0036.jpg?ex=67367dbc&is=67352c3c&hm=2284033822a35e07b2696b30cb5be3c79bd5a32cdc88ce59351d901c2a831116&" alt="Imagem 3">
+            <p>Eu não consigo expressar em palavras, ações, gestos, ou nada desse tipo o tamanho do meu amor por vc</p>
+        </div>
+    </div>
+
+    <button class="add-content-btn" onclick="addNewContent()">Adicionar Conteúdo</button>
+
+    <footer>
+        <p>Desenvolvido com amor para duds.</p>
+    </footer>
+
+    <script>
+        function addNewContent() {
+            const contentContainer = document.querySelector('.content');
+
+            // Criar um novo cartão de conteúdo
+            const newCard = document.createElement('div');
+            newCard.classList.add('card');
+            
+            // Adicionar uma imagem (pode ser personalizada ou deixada como placeholder)
+            const newImage = document.createElement('img');
+            newImage.src = "https://via.placeholder.com/300x200?text=Nova+Imagem";
+            newImage.alt = "Nova Imagem";
+            newCard.appendChild(newImage);
+            
+            // Adicionar um título
+            const newTitle = document.createElement('h2');
+            newTitle.textContent = "Novo Título";
+            newCard.appendChild(newTitle);
+            
+            // Adicionar um texto
+            const newText = document.createElement('p');
+            newText.textContent = "Este é um novo conteúdo. Fique à vontade para editar!";
+            newCard.appendChild(newText);
+
+            // Adicionar o novo cartão na seção de conteúdo
+            contentContainer.appendChild(newCard);
+        }
+    </script>
+
+</body>
+</html>
